@@ -1,0 +1,10 @@
+/* src/index.css or src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom CSS can go here */
+body{
+    font-family: poppins,sans-serif;
+}

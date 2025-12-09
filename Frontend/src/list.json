@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "food",
+    "title": "Food Book",
+    "price": 0,
+    "categories": "free",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 2,
+    "name": "travel",
+    "title": "Travel Guide",
+    "price": 0,
+    "categories": "free",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 3,
+    "name": "technology",
+    "title": "Tech Innovations",
+    "price": 0,
+    "categories": "free",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 4,
+    "name": "health",
+    "title": "Healthy Living",
+    "price": 0,
+    "categories": "free",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 5,
+    "name": "education",
+    "title": "Study Smart Book",
+    "price": 99,
+    "categories": "education",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 6,
+    "name": "fashion",
+    "title": "Fashion Trends",
+    "price": 249,
+    "categories": "fashion",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 7,
+    "name": "sports",
+    "title": "Sports Fitness",
+    "price": 129,
+    "categories": "sports",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 8,
+    "name": "history",
+    "title": "World History Book",
+    "price": 199,
+    "categories": "history",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 9,
+    "name": "business",
+    "title": "Business Strategy",
+    "price": 349,
+    "categories": "business",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 10,
+    "name": "novel",
+    "title": "Romantic Novel",
+    "price": 159,
+    "categories": "novel",
+    "image": "https://img.freepik.com/free-vector/text-books-library-isolated-icon_24877-83372.jpg?semt=ais_hybrid&w=740&q=80"
+  }
+]
