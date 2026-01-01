@@ -7,8 +7,10 @@ import bookRoutes from "./routes/book.route.js";
 import cors from "cors"
 import userRoute from './routes/user.route.js'
 
+app.use(cors({
+  origin: ['https://bookapp-frontend.onrender.com', 'http://localhost:5173']
+}));
 
-app.use(cors());
 app.use(express.json())
 dotenv.config();
 const PORT=process.env.PORT||4000;

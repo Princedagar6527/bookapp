@@ -4,12 +4,14 @@ import axios from "axios";
 import list from '../list.json'
 import Cards from '../components/cards.jsx'
 import { Link } from 'react-router-dom'
+
 export default function Books() {
    const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/books");
+        // Change this line - Use Render backend URL
+        const res = await axios.get("https://bookapp-backend.onrender.com/books");
         console.log(res.data);
         setBook(res.data);
       } catch (error) {
@@ -18,6 +20,7 @@ export default function Books() {
     };
     getBook();
   }, []);
+  
   return (
    <>
    <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 '>
@@ -39,4 +42,3 @@ export default function Books() {
    </>
   )
 }
-
