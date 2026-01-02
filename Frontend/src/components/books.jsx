@@ -11,7 +11,7 @@ export default function Books() {
     const getBook = async () => {
       try {
         // Change this line - Use Render backend URL
-        const res = await axios.get("https://bookapp-backend.onrender.com/books");
+        const res = await axios.get("https://bookapp-atbf.onrender.com/books");
         console.log(res.data);
         setBook(res.data);
       } catch (error) {
