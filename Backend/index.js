@@ -1,34 +1,45 @@
-
 import express from 'express'
-const app=express();
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import bookRoutes from "./routes/book.route.js";
 import cors from "cors"
 import userRoute from './routes/user.route.js'
 
+// Load environment variables first
+dotenv.config();
+
+const app = express();
+
+// CORS configuration with correct frontend URL
 app.use(cors({
-  origin: ['https://bookapp-frontend.onrender.com', 'http://localhost:5173']
+  origin: ['https://bookapp-1-n1lr.onrender.com', 'http://localhost:5173'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-app.use(express.json())
-dotenv.config();
-const PORT=process.env.PORT||4000;
-const URI=process.env.MONGODBURI;
+// Parse JSON bodies
+app.use(express.json());
 
+const PORT = process.env.PORT || 4000;
+const URI = process.env.MONGODBURI;
 
-//mongodb connection
-try {
-     mongoose.connect(URI)
-      console.log("Connected to mongoDB"); 
-    } catch (error) { 
-        console.log("Error: ", error); 
-    }
+// MongoDB connection with proper async/await
+const connectDB = async () => {
+  try {
+    await mongoose.connect(URI);
+    console.log("Connected to MongoDB");
+  } catch (error) {
+    console.log("Error: ", error);
+    process.exit(1);
+  }
+};
 
+connectDB();
 
-//routes
+// Routes
 
-// Root route - Add this
+// Root route
 app.get('/', (req, res) => {
   res.json({ 
     message: "Book My App API is running successfully!", 
@@ -41,9 +52,9 @@ app.get('/', (req, res) => {
 });
 
 app.use("/books", bookRoutes);
-app.use("/users",userRoute);
+app.use("/users", userRoute);
 
-
-app.listen(PORT,()=>{
-    console.log(`the port start listening at ${PORT}`);
-})
+// Start server
+app.listen(PORT, () => {
+  console.log(`The server is listening on port ${PORT}`);
+});
