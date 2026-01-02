@@ -11,8 +11,11 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: '*',
-  credentials: false
+  origin: [
+    'https://bookapp-1-n1lr.onrender.com',
+    'http://localhost:5173'
+  ],
+  credentials: true
 }));
 
 // Parse JSON bodies
